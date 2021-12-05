@@ -7,12 +7,20 @@ import (
 	"strconv"
 )
 
+var products = Products{}
+
 func main() {
-	products := Products{}
 	products.InitProducts()
 
-	app := fiber.New(fiber.Config{DisableStartupMessage: true})
+	err := startServer(3000)
+	if err != nil {
+		log.Fatal(err)
+	}
+	log.Println("Provider Service Listening :3000")
+}
 
+func startServer(port int) error {
+	app := fiber.New(fiber.Config{DisableStartupMessage: true})
 	app.Get("/products/:id/discount", func(c *fiber.Ctx) error {
 		fmt.Println("İstek geldi")
 
@@ -26,7 +34,6 @@ func main() {
 
 		return c.JSON(product)
 	})
-
-	log.Println("Provider Service Listening :3000")
-	log.Fatal(app.Listen(":3000"))
+	err := app.Listen(fmt.Sprintf(":%d", port))
+	return err
 }
