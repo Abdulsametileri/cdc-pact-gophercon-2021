@@ -34,11 +34,10 @@ func TestConsumer(t *testing.T) {
 			},
 			Body: dsl.StructMatcher{
 				"id":          dsl.Like(1),
-				"price":       dsl.Like(70),
+				"price":       dsl.Decimal(),
 				"productName": dsl.Like(""),
 			},
 		})
-
 	err := pact.Verify(func() error {
 		return makeRequest(pact.Server.Port)
 	})
@@ -49,7 +48,7 @@ func TestConsumer(t *testing.T) {
 
 	/*
 			   curl -X PUT \
-		       http://localhost/pacts/provider/CampaignService/consumer/ProductService/version/1.0.1 \
+		       http://localhost/pacts/provider/CampaignService/consumer/ProductService/version/1.0.0 \
 			  -H "Content-Type: application/json" \
 			  -d @/Users/abdulsamet.ileri/Desktop/personal/cdc-pact-gophercon-2021/product/pacts/productservice-campaignservice.json
 	*/

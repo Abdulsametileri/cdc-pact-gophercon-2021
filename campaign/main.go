@@ -22,8 +22,6 @@ func main() {
 func startServer(port int) error {
 	app := fiber.New(fiber.Config{DisableStartupMessage: true})
 	app.Get("/products/:id/discount", func(c *fiber.Ctx) error {
-		fmt.Println("İstek geldi")
-
 		discountRate, _ := strconv.ParseFloat(c.Query("rate"), 64)
 		productID, _ := c.ParamsInt("id", 0)
 
