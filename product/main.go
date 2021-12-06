@@ -9,13 +9,13 @@ import (
 )
 
 func main() {
-	if err := makeRequest(3000); err != nil {
+	if err := makeRequest(3000, 1); err != nil {
 		log.Fatal(err)
 	}
 }
 
-func makeRequest(port int) error {
-	resp, err := http.Get(fmt.Sprintf("http://localhost:%d/products/1/discount?rate=30", port))
+func makeRequest(port, productID int) error {
+	resp, err := http.Get(fmt.Sprintf("http://localhost:%d/products/%d/discount?rate=30", port, productID))
 	if err != nil {
 		return errors.New("unable to send the request")
 	}

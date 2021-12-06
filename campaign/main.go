@@ -22,8 +22,15 @@ func main() {
 func startServer(port int) error {
 	app := fiber.New(fiber.Config{DisableStartupMessage: true})
 	app.Get("/products/:id/discount", func(c *fiber.Ctx) error {
-		discountRate, _ := strconv.ParseFloat(c.Query("rate"), 64)
 		productID, _ := c.ParamsInt("id", 0)
+		if productID == 2 {
+			return c.JSON(map[string]interface{}{
+				"success": false,
+				"message": "No campaign found for this product",
+			})
+		}
+
+		discountRate, _ := strconv.ParseFloat(c.Query("rate"), 64)
 
 		product := products[productID]
 

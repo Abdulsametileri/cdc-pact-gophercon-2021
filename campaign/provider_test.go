@@ -44,8 +44,8 @@ func (s *Settings) create() {
 	s.ConsumerName = "ProductService"
 	s.BrokerBaseURL = "http://localhost"
 	s.ConsumerTag = "master"
-	s.ProviderVersion = "1.0.0"
-	s.ConsumerVersion = "1.0.0"
+	s.ProviderVersion = "1.0.1"
+	s.ConsumerVersion = "1.0.1"
 }
 
 func TestProvider(t *testing.T) {
@@ -71,6 +71,9 @@ func TestProvider(t *testing.T) {
 		PactURLs:        []string{settings.getPactURL(false)},
 		StateHandlers: map[string]types.StateHandler{
 			"i get new product price with specified discount rate": func() error {
+				return nil
+			},
+			"i get campaign not found error when the product has no discount": func() error {
 				return nil
 			},
 		},
