@@ -44,8 +44,8 @@ func (s *Settings) create() {
 	s.ConsumerName = "ProductService"
 	s.BrokerBaseURL = "http://localhost"
 	s.ConsumerTag = "master"
-	s.ProviderVersion = "1.0.0"
-	s.ConsumerVersion = "1.0.0"
+	s.ProviderVersion = "1.0.1"
+	s.ConsumerVersion = "1.0.1"
 }
 
 func TestProvider(t *testing.T) {

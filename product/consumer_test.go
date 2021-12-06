@@ -33,9 +33,9 @@ func TestConsumer(t *testing.T) {
 				fiber.HeaderContentType: dsl.String(fiber.MIMEApplicationJSON),
 			},
 			Body: dsl.StructMatcher{
-				"id":    dsl.Like(1),
-				"price": dsl.Like(70),
-				"name":  dsl.Like(""),
+				"id":          dsl.Like(1),
+				"price":       dsl.Like(70),
+				"productName": dsl.Like(""),
 			},
 		})
 
@@ -48,9 +48,9 @@ func TestConsumer(t *testing.T) {
 	}
 
 	/*
-		   curl -X PUT \
-	       http://localhost/pacts/provider/CampaignService/consumer/ProductService/version/1.0.0 \
-		  -H "Content-Type: application/json" \
-		  -d @/Users/abdulsamet.ileri/Desktop/personal/cdc-pact-gophercon-2021/product/pacts/productservice-campaignservice.json
+			   curl -X PUT \
+		       http://localhost/pacts/provider/CampaignService/consumer/ProductService/version/1.0.1 \
+			  -H "Content-Type: application/json" \
+			  -d @/Users/abdulsamet.ileri/Desktop/personal/cdc-pact-gophercon-2021/product/pacts/productservice-campaignservice.json
 	*/
 }
