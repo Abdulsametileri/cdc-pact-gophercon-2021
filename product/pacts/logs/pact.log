@@ -1,0 +1,45 @@
+I, [2021-12-10T09:14:25.981301 #84548]  INFO -- : Registered expected interaction GET /products/3/discount?rate=30
+D, [2021-12-10T09:14:25.981461 #84548] DEBUG -- : {
+  "description": "A request for campaign with nonexist product",
+  "providerState": "i get the product does not exist",
+  "request": {
+    "method": "GET",
+    "path": "/products/3/discount",
+    "query": {
+      "rate": [
+        {
+          "json_class": "Pact::SomethingLike",
+          "contents": "30"
+        }
+      ]
+    }
+  },
+  "response": {
+    "status": 404,
+    "headers": {
+      "Content-Type": "text/plain; charset=utf-8"
+    }
+  },
+  "metadata": null
+}
+I, [2021-12-10T09:14:25.982932 #84548]  INFO -- : Received request GET /products/3/discount?rate=30
+D, [2021-12-10T09:14:25.983038 #84548] DEBUG -- : {
+  "path": "/products/3/discount",
+  "query": "rate=30",
+  "method": "get",
+  "headers": {
+    "Host": "localhost:55267",
+    "User-Agent": "Go-http-client/1.1",
+    "Accept-Encoding": "gzip",
+    "Version": "HTTP/1.1"
+  }
+}
+I, [2021-12-10T09:14:25.983375 #84548]  INFO -- : Found matching response for GET /products/3/discount?rate=30
+D, [2021-12-10T09:14:25.983436 #84548] DEBUG -- : {
+  "status": 404,
+  "headers": {
+    "Content-Type": "text/plain; charset=utf-8"
+  }
+}
+I, [2021-12-10T09:14:25.984050 #84548]  INFO -- : Verifying - interactions matched
+I, [2021-12-10T09:14:25.984627 #84548]  INFO -- : Cleared interactions
