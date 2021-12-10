@@ -1,3 +1,6 @@
+//go:build provider
+// +build provider
+
 package main
 
 import (
@@ -25,7 +28,7 @@ func (s *Settings) getPactURL(useLocal bool) string {
 	var pactURL string
 
 	if useLocal {
-		pactURL = "/Users/abdulsamet.ileri/Desktop/personal/cdc-pact-gophercon-2021/product/pacts/productservice-campaignservice.json"
+		pactURL = "../product/pacts/productservice-campaignservice.json"
 		return pactURL
 	}
 
@@ -44,8 +47,8 @@ func (s *Settings) create() {
 	s.ConsumerName = "ProductService"
 	s.BrokerBaseURL = "http://localhost"
 	s.ConsumerTag = "master"
-	s.ProviderVersion = "1.0.1"
-	s.ConsumerVersion = "1.0.1"
+	s.ProviderVersion = "1.0.3"
+	s.ConsumerVersion = "1.0.7"
 }
 
 func TestProvider(t *testing.T) {
@@ -74,6 +77,10 @@ func TestProvider(t *testing.T) {
 				return nil
 			},
 			"i get campaign not found error when the product has no discount": func() error {
+				return nil
+			},
+			"i get the product does not exist": func() error {
+				delete(products, 3)
 				return nil
 			},
 		},
