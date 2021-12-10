@@ -1,6 +1,7 @@
 package main
 
 import (
+	"fmt"
 	"github.com/gofiber/fiber/v2"
 	"log"
 	"net/http"
@@ -14,6 +15,7 @@ func main() {
 	app := fiber.New(fiber.Config{DisableStartupMessage: true})
 
 	app.Get("/products/:id/discount", func(c *fiber.Ctx) error {
+		fmt.Println("Request has come")
 		productID, _ := c.ParamsInt("id", 0)
 
 		if productID == 2 {

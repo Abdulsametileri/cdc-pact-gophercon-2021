@@ -20,6 +20,7 @@ func main() {
 	if err != nil {
 		log.Fatal("unable to read the body")
 	}
+	defer resp.Body.Close()
 
 	fmt.Println(string(body))
 }
