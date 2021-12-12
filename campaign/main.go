@@ -24,19 +24,19 @@ func startServer(port int) error {
 	app := fiber.New(fiber.Config{DisableStartupMessage: true})
 	app.Get("/products/:id/discount", func(c *fiber.Ctx) error {
 		productID, _ := c.ParamsInt("id", 0)
-		if productID == 2 {
-			return c.
-				Status(http.StatusNotAcceptable).
-				JSON(map[string]interface{}{
-					"message": "No campaign found for this product",
-				})
-		}
-
 		discountRate, _ := strconv.ParseFloat(c.Query("rate"), 64)
 
 		product, ok := products[productID]
 		if !ok {
 			return c.SendStatus(http.StatusNotFound)
+		}
+
+		if !product.HasCampaign {
+			return c.
+				Status(http.StatusNotAcceptable).
+				JSON(map[string]interface{}{
+					"message": "No campaign found for this product",
+				})
 		}
 
 		discountedPrice := products[productID].Price - (products[productID].Price*discountRate)/100

@@ -75,12 +75,15 @@ func TestProvider(t *testing.T) {
 		BrokerUsername:  settings.BrokerUsername,
 		BrokerPassword:  settings.BrokerPassword,
 		Tags:            []string{settings.ConsumerTag},
-		PactURLs:        []string{settings.getPactURL(false)},
+		PactURLs:        []string{settings.getPactURL(true)},
 		StateHandlers: map[string]types.StateHandler{
 			"i get new product price with specified discount rate": func() error {
 				return nil
 			},
 			"i get campaign not found error when the product has no discount": func() error {
+				product := products[2]
+				product.HasCampaign = false
+				products[2] = product
 				return nil
 			},
 			"i get the product does not exist": func() error {
