@@ -8,6 +8,10 @@
 - ✅ Gives fast feedback
 - ✅ Implement any programming language you want. [For example](https://docs.pact.io/implementation_guides/cli)
 - ✅ No dedicated test environments (it works on dev machine)
+
+# Project Architecture 🚀
+
+![](images/our-arch.png)
   
 # ℹ️ Terminology 
 
@@ -30,10 +34,6 @@ It enables you to share your pacts and verification results between projects
 # Pact Generation and Verification Flow 🚀
 
 ![](images/pact-arch.svg)
-
-# Project Architecture 🚀
-
-![](images/our-arch.png)
 
 ## Matching on types
 
