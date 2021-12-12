@@ -19,8 +19,8 @@ type Settings struct {
 	BrokerUsername  string // Basic authentication
 	BrokerPassword  string // Basic authentication
 	ConsumerName    string
-	ConsumerVersion string
-	ConsumerTag     string
+	ConsumerVersion string // a git sha, semantic version number
+	ConsumerTag     string // dev, staging, prod
 	ProviderVersion string
 }
 
