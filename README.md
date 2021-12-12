@@ -26,4 +26,5 @@ Born out of a microservices boom, Pact was created to solve the problem of integ
 [Pact Broker Docker](https://github.com/pact-foundation/pact-broker-docker)     
 [Building Microservices](https://samnewman.io/books/)   
 [Contract testing and how Pact works](https://www.youtube.com/watch?v=IetyhDr48RI)      
-[Test Double](https://www.martinfowler.com/bliki/TestDouble.html)
+[Test Double](https://www.martinfowler.com/bliki/TestDouble.html)       
+[Difference between gobuild and build directive](https://stackoverflow.com/questions/68360688/whats-the-difference-between-gobuild-and-build-directives)
