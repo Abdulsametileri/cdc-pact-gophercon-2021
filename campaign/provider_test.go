@@ -16,8 +16,8 @@ type Settings struct {
 	Host            string
 	ProviderName    string
 	BrokerBaseURL   string
-	BrokerUsername  string
-	BrokerPassword  string
+	BrokerUsername  string // Basic authentication
+	BrokerPassword  string // Basic authentication
 	ConsumerName    string
 	ConsumerVersion string
 	ConsumerTag     string
@@ -25,6 +25,7 @@ type Settings struct {
 }
 
 func (s *Settings) getPactURL(useLocal bool) string {
+	// Local pact file or remote based urls (Pact Broker)
 	var pactURL string
 
 	if useLocal {
@@ -65,6 +66,9 @@ func TestProvider(t *testing.T) {
 		DisableToolValidityCheck: true,
 	}
 
+	// The name of the provider state is specified in the given clause of an interaction in the consumer, and then
+	// used to find the block of code to run in the provider to set up the right data.
+	// Provider states also allow the consumer to make the same request with different expected responses.
 	verifyRequest := types.VerifyRequest{
 		ProviderBaseURL: fmt.Sprintf("http://%s:%d", settings.Host, port),
 		ProviderVersion: settings.ProviderVersion,
@@ -80,6 +84,7 @@ func TestProvider(t *testing.T) {
 				return nil
 			},
 			"i get the product does not exist": func() error {
+				// we ensure that products map has no key 3.
 				delete(products, 3)
 				return nil
 			},

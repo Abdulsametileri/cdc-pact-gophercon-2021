@@ -56,9 +56,13 @@ func Test_IGetNewProductPriceWithSpecifiedDiscountRate(t *testing.T) {
 				"name":  dsl.Like(""),
 			},
 		})
-	err := pact.Verify(func() error {
+
+	// This is the component that makes the external HTTP Call
+	var test = func() error {
 		return makeRequest(pact.Server.Port, productIDWithDiscount, discountRate)
-	})
+	}
+
+	err := pact.Verify(test)
 
 	if err != nil {
 		t.Fatal(err)
