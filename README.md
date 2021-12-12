@@ -11,11 +11,19 @@
   ![](images/pact.png)
 - Remember that pact is for testing the contract used for communication, and not for testing particular UI behaviour or
   business logic.
-- ![](images/test-pyramid.png)        
-  (Mike Cohn’s Test Pyramid. Cohn, Mike, Succeeding with Agile: Software Development Using Scrum)
-  > **Unit tests** are typically test a single function or method call.     
-  **Service tests** are designed to bypass the user interface and test services directly.     
-  **End-to-end tests** are tests run against your entire system
+  
+# Terminology
+> Interaction: A request and response pair. A pact consists of a collection of _interactions_.
+
+> Pact file: A file containing the JSON serialised interactions (requests and responses) that were defined in the 
+consumer tests. This is the Contract.
+
+> Pact verification: To verify a Pact contract, the requests contained in a Pact file are replayed against the provider 
+code, and the responses returned are checked to ensure they match those expected in the Pact file.
+
+> Pact Specification
+A provider state name is specified when writing the consumer specs, then, when the pact verification is set up in the provider 
+the same name will be used to identify the set up code block that should be run before the request is executed.
 
 # Project Architecture
 
