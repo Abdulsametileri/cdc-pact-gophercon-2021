@@ -1,18 +1,21 @@
-# CDC Pact
+# CDC Pact 
 
 - **Pact** is a consumer-driven contract testing framework. Born out of a microservices boom, Pact was created to solve
   the problem of integration testing large, distributed systems.
   (Old definition)
-- Rescue for integration test cost.
-- Implement any programming language you want. [For example](https://docs.pact.io/implementation_guides/cli)
-- No dedicated test environments (it works on dev machine)
+- [How Pact works slide from pactflow.io](https://pactflow.io/how-pact-works/#slide-1)
+- ✅ Rescue for integration test cost.
+- ✅ Gives fast feedback
+- ✅ Implement any programming language you want. [For example](https://docs.pact.io/implementation_guides/cli)
+- ✅ No dedicated test environments (it works on dev machine)
 - A contract between a consumer and provider is called a **pact**. Each pact is a collection of **interactions**. (
   expected request, minimal expected response)
   ![](images/pact.png)
 - Remember that pact is for testing the contract used for communication, and not for testing particular UI behaviour or
   business logic.
   
-# Terminology
+# ℹ️ Terminology 
+
 > Interaction: A request and response pair. A pact consists of a collection of _interactions_.
 
 > Pact file: A file containing the JSON serialised interactions (requests and responses) that were defined in the 
@@ -25,15 +28,15 @@ code, and the responses returned are checked to ensure they match those expected
 A provider state name is specified when writing the consumer specs, then, when the pact verification is set up in the provider 
 the same name will be used to identify the set up code block that should be run before the request is executed.
 
-# Pact Broker
+# ℹ️ Pact Broker
 The Pact Broker is an open source tool that requires you to deploy, administer and host yourself.
 It enables you to share your pacts and verification results between projects
 
-# Pact Generation and Verification Flow
+# Pact Generation and Verification Flow 🚀
 
 ![](images/pact-arch.svg)
 
-# Project Architecture
+# Project Architecture 🚀
 
 ![](images/our-arch.png)
 
@@ -75,7 +78,7 @@ mock responses.
 | `IPv6Address()` | Match string containing IP6 formatted address                                                   |
 | `UUID()`        | Match strings containing UUIDs                                                                  |
 
-# References
+# 🤘 References 💪
 
 [Pact Docs](https://docs.pact.io/)  
 [Pact Go](https://github.com/pact-foundation/pact-go)    
