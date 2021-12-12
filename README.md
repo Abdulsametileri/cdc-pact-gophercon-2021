@@ -25,11 +25,17 @@ code, and the responses returned are checked to ensure they match those expected
 A provider state name is specified when writing the consumer specs, then, when the pact verification is set up in the provider 
 the same name will be used to identify the set up code block that should be run before the request is executed.
 
+# Pact Broker
+The Pact Broker is an open source tool that requires you to deploy, administer and host yourself.
+It enables you to share your pacts and verification results between projects
+
+# Pact Generation and Verification Flow
+
+![](images/pact-arch.svg)
+
 # Project Architecture
 
 ![](images/our-arch.png)
-
-# Matching
 
 ## Matching on types
 
