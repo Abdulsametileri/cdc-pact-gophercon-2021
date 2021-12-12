@@ -8,11 +8,6 @@
 - ✅ Gives fast feedback
 - ✅ Implement any programming language you want. [For example](https://docs.pact.io/implementation_guides/cli)
 - ✅ No dedicated test environments (it works on dev machine)
-- A contract between a consumer and provider is called a **pact**. Each pact is a collection of **interactions**. (
-  expected request, minimal expected response)
-  ![](images/pact.png)
-- Remember that pact is for testing the contract used for communication, and not for testing particular UI behaviour or
-  business logic.
   
 # ℹ️ Terminology 
 
