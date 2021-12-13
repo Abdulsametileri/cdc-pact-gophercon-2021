@@ -49,7 +49,7 @@ func (s *Settings) create() {
 	s.BrokerBaseURL = "http://localhost"
 	s.ConsumerTag = "master"
 	s.ProviderVersion = "1.0.0"
-	s.ConsumerVersion = "1.0.0"
+	s.ConsumerVersion = "1.0.4"
 }
 
 func TestProvider(t *testing.T) {
@@ -73,6 +73,7 @@ func TestProvider(t *testing.T) {
 		ProviderBaseURL: fmt.Sprintf("http://%s:%d", settings.Host, port),
 		ProviderVersion: settings.ProviderVersion,
 		BrokerUsername:  settings.BrokerUsername,
+		BrokerURL:       settings.BrokerBaseURL,
 		BrokerPassword:  settings.BrokerPassword,
 		Tags:            []string{settings.ConsumerTag},
 		PactURLs:        []string{settings.getPactURL(true)},
