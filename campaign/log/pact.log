@@ -1,0 +1,211 @@
+# Logfile created on 2021-12-10 09:12:54 +0300 by logger.rb/66358
+I, [2021-12-10T09:12:54.946961 #84038]  INFO -- : Running example 'Verifying a pact between ProductService and CampaignService Given i get new product price with specified discount rate A request for campaign with GET /products/1/discount?rate=30 returns a response which has status code 200'
+I, [2021-12-10T09:12:54.958259 #84038]  INFO -- : Sending GET request to path: "/products/1/discount?rate=30" with headers: {"X_PACT_PROVIDER_STATES"=>[{"name"=>"i get new product price with specified discount rate"}]}, see debug logs for body
+D, [2021-12-10T09:12:54.958330 #84038] DEBUG -- : body :
+I, [2021-12-10T09:12:54.969535 #84038]  INFO -- : Received response with status: 200, headers: {"Content-Length"=>"38", "Content-Type"=>"application/json", "Date"=>"Fri, 10 Dec 2021 06:12:54 GMT"}, see debug logs for body
+D, [2021-12-10T09:12:54.969605 #84038] DEBUG -- : body: {"id":1,"name":"Product 1","price":70}
+I, [2021-12-10T09:12:54.971856 #84038]  INFO -- : Running example 'Verifying a pact between ProductService and CampaignService Given i get campaign not found error when the product has no discount A request for campaign without discounted product with GET /products/2/discount?rate=30 returns a response which has status code 406'
+I, [2021-12-10T09:12:54.981191 #84038]  INFO -- : Sending GET request to path: "/products/2/discount?rate=30" with headers: {"X_PACT_PROVIDER_STATES"=>[{"name"=>"i get campaign not found error when the product has no discount"}]}, see debug logs for body
+D, [2021-12-10T09:12:54.981262 #84038] DEBUG -- : body :
+I, [2021-12-10T09:12:54.983568 #84038]  INFO -- : Received response with status: 406, headers: {"Content-Length"=>"48", "Content-Type"=>"application/json", "Date"=>"Fri, 10 Dec 2021 06:12:54 GMT"}, see debug logs for body
+D, [2021-12-10T09:12:54.983635 #84038] DEBUG -- : body: {"message":"No campaign found for this product"}
+I, [2021-12-10T09:12:54.984489 #84038]  INFO -- : Running example 'Verifying a pact between ProductService and CampaignService Given i get the product does not exist A request for campaign with nonexist product with GET /products/3/discount?rate=30 returns a response which has status code 404'
+I, [2021-12-10T09:12:54.994350 #84038]  INFO -- : Sending GET request to path: "/products/3/discount?rate=30" with headers: {"X_PACT_PROVIDER_STATES"=>[{"name"=>"i get the product does not exist"}]}, see debug logs for body
+D, [2021-12-10T09:12:54.994436 #84038] DEBUG -- : body :
+I, [2021-12-10T09:12:54.996421 #84038]  INFO -- : Received response with status: 404, headers: {"Content-Length"=>"9", "Content-Type"=>"text/plain; charset=utf-8", "Date"=>"Fri, 10 Dec 2021 06:12:54 GMT"}, see debug logs for body
+D, [2021-12-10T09:12:54.996475 #84038] DEBUG -- : body: Not Found
+I, [2021-12-10T09:13:26.862467 #84223]  INFO -- : Running example 'Verifying a pact between ProductService and CampaignService Given i get new product price with specified discount rate A request for campaign with GET /products/1/discount?rate=30 returns a response which has status code 200'
+I, [2021-12-10T09:13:26.873614 #84223]  INFO -- : Sending GET request to path: "/products/1/discount?rate=30" with headers: {"X_PACT_PROVIDER_STATES"=>[{"name"=>"i get new product price with specified discount rate"}]}, see debug logs for body
+D, [2021-12-10T09:13:26.873685 #84223] DEBUG -- : body :
+I, [2021-12-10T09:13:26.884411 #84223]  INFO -- : Received response with status: 200, headers: {"Content-Length"=>"38", "Content-Type"=>"application/json", "Date"=>"Fri, 10 Dec 2021 06:13:26 GMT"}, see debug logs for body
+D, [2021-12-10T09:13:26.884475 #84223] DEBUG -- : body: {"id":1,"name":"Product 1","price":70}
+I, [2021-12-10T09:13:26.886224 #84223]  INFO -- : Running example 'Verifying a pact between ProductService and CampaignService Given i get campaign not found error when the product has no discount A request for campaign without discounted product with GET /products/2/discount?rate=30 returns a response which has status code 406'
+I, [2021-12-10T09:13:26.895196 #84223]  INFO -- : Sending GET request to path: "/products/2/discount?rate=30" with headers: {"X_PACT_PROVIDER_STATES"=>[{"name"=>"i get campaign not found error when the product has no discount"}]}, see debug logs for body
+D, [2021-12-10T09:13:26.895265 #84223] DEBUG -- : body :
+I, [2021-12-10T09:13:26.897102 #84223]  INFO -- : Received response with status: 406, headers: {"Content-Length"=>"48", "Content-Type"=>"application/json", "Date"=>"Fri, 10 Dec 2021 06:13:26 GMT"}, see debug logs for body
+D, [2021-12-10T09:13:26.897139 #84223] DEBUG -- : body: {"message":"No campaign found for this product"}
+I, [2021-12-10T09:13:26.897880 #84223]  INFO -- : Running example 'Verifying a pact between ProductService and CampaignService Given i get the product does not exist A request for campaign with nonexist product with GET /products/3/discount?rate=30 returns a response which has status code 404'
+I, [2021-12-10T09:13:26.906549 #84223]  INFO -- : Sending GET request to path: "/products/3/discount?rate=30" with headers: {"X_PACT_PROVIDER_STATES"=>[{"name"=>"i get the product does not exist"}]}, see debug logs for body
+D, [2021-12-10T09:13:26.906605 #84223] DEBUG -- : body :
+I, [2021-12-10T09:13:26.908201 #84223]  INFO -- : Received response with status: 404, headers: {"Content-Length"=>"9", "Content-Type"=>"text/plain; charset=utf-8", "Date"=>"Fri, 10 Dec 2021 06:13:26 GMT"}, see debug logs for body
+D, [2021-12-10T09:13:26.908237 #84223] DEBUG -- : body: Not Found
+I, [2021-12-10T09:14:57.910472 #84734]  INFO -- : Running example 'Verifying a pact between ProductService and CampaignService Given i get new product price with specified discount rate A request for campaign with GET /products/1/discount?rate=30 returns a response which has status code 200'
+I, [2021-12-10T09:14:57.921590 #84734]  INFO -- : Sending GET request to path: "/products/1/discount?rate=30" with headers: {"X_PACT_PROVIDER_STATES"=>[{"name"=>"i get new product price with specified discount rate"}]}, see debug logs for body
+D, [2021-12-10T09:14:57.921658 #84734] DEBUG -- : body :
+I, [2021-12-10T09:14:57.934197 #84734]  INFO -- : Received response with status: 200, headers: {"Content-Length"=>"45", "Content-Type"=>"application/json", "Date"=>"Fri, 10 Dec 2021 06:14:57 GMT"}, see debug logs for body
+D, [2021-12-10T09:14:57.934288 #84734] DEBUG -- : body: {"id":1,"productName":"Product 1","price":70}
+I, [2021-12-10T09:14:57.939098 #84734]  INFO -- : Running example 'Verifying a pact between ProductService and CampaignService Given i get campaign not found error when the product has no discount A request for campaign without discounted product with GET /products/2/discount?rate=30 returns a response which has status code 406'
+I, [2021-12-10T09:14:57.948101 #84734]  INFO -- : Sending GET request to path: "/products/2/discount?rate=30" with headers: {"X_PACT_PROVIDER_STATES"=>[{"name"=>"i get campaign not found error when the product has no discount"}]}, see debug logs for body
+D, [2021-12-10T09:14:57.948164 #84734] DEBUG -- : body :
+I, [2021-12-10T09:14:57.950020 #84734]  INFO -- : Received response with status: 406, headers: {"Content-Length"=>"48", "Content-Type"=>"application/json", "Date"=>"Fri, 10 Dec 2021 06:14:57 GMT"}, see debug logs for body
+D, [2021-12-10T09:14:57.950069 #84734] DEBUG -- : body: {"message":"No campaign found for this product"}
+I, [2021-12-10T09:14:57.950893 #84734]  INFO -- : Running example 'Verifying a pact between ProductService and CampaignService Given i get the product does not exist A request for campaign with nonexist product with GET /products/3/discount?rate=30 returns a response which has status code 404'
+I, [2021-12-10T09:14:57.959958 #84734]  INFO -- : Sending GET request to path: "/products/3/discount?rate=30" with headers: {"X_PACT_PROVIDER_STATES"=>[{"name"=>"i get the product does not exist"}]}, see debug logs for body
+D, [2021-12-10T09:14:57.960022 #84734] DEBUG -- : body :
+I, [2021-12-10T09:14:57.961629 #84734]  INFO -- : Received response with status: 404, headers: {"Content-Length"=>"9", "Content-Type"=>"text/plain; charset=utf-8", "Date"=>"Fri, 10 Dec 2021 06:14:57 GMT"}, see debug logs for body
+D, [2021-12-10T09:14:57.961696 #84734] DEBUG -- : body: Not Found
+I, [2021-12-10T09:15:10.365369 #84820]  INFO -- : Running example 'Verifying a pact between ProductService and CampaignService Given i get new product price with specified discount rate A request for campaign with GET /products/1/discount?rate=30 returns a response which has status code 200'
+I, [2021-12-10T09:15:10.376219 #84820]  INFO -- : Sending GET request to path: "/products/1/discount?rate=30" with headers: {"X_PACT_PROVIDER_STATES"=>[{"name"=>"i get new product price with specified discount rate"}]}, see debug logs for body
+D, [2021-12-10T09:15:10.376280 #84820] DEBUG -- : body :
+I, [2021-12-10T09:15:10.386817 #84820]  INFO -- : Received response with status: 200, headers: {"Content-Length"=>"38", "Content-Type"=>"application/json", "Date"=>"Fri, 10 Dec 2021 06:15:10 GMT"}, see debug logs for body
+D, [2021-12-10T09:15:10.386896 #84820] DEBUG -- : body: {"id":1,"name":"Product 1","price":70}
+I, [2021-12-10T09:15:10.388528 #84820]  INFO -- : Running example 'Verifying a pact between ProductService and CampaignService Given i get campaign not found error when the product has no discount A request for campaign without discounted product with GET /products/2/discount?rate=30 returns a response which has status code 406'
+I, [2021-12-10T09:15:10.397581 #84820]  INFO -- : Sending GET request to path: "/products/2/discount?rate=30" with headers: {"X_PACT_PROVIDER_STATES"=>[{"name"=>"i get campaign not found error when the product has no discount"}]}, see debug logs for body
+D, [2021-12-10T09:15:10.397632 #84820] DEBUG -- : body :
+I, [2021-12-10T09:15:10.399441 #84820]  INFO -- : Received response with status: 406, headers: {"Content-Length"=>"48", "Content-Type"=>"application/json", "Date"=>"Fri, 10 Dec 2021 06:15:10 GMT"}, see debug logs for body
+D, [2021-12-10T09:15:10.399486 #84820] DEBUG -- : body: {"message":"No campaign found for this product"}
+I, [2021-12-10T09:15:10.400222 #84820]  INFO -- : Running example 'Verifying a pact between ProductService and CampaignService Given i get the product does not exist A request for campaign with nonexist product with GET /products/3/discount?rate=30 returns a response which has status code 404'
+I, [2021-12-10T09:15:10.408768 #84820]  INFO -- : Sending GET request to path: "/products/3/discount?rate=30" with headers: {"X_PACT_PROVIDER_STATES"=>[{"name"=>"i get the product does not exist"}]}, see debug logs for body
+D, [2021-12-10T09:15:10.408820 #84820] DEBUG -- : body :
+I, [2021-12-10T09:15:10.410442 #84820]  INFO -- : Received response with status: 404, headers: {"Content-Length"=>"9", "Content-Type"=>"text/plain; charset=utf-8", "Date"=>"Fri, 10 Dec 2021 06:15:10 GMT"}, see debug logs for body
+D, [2021-12-10T09:15:10.410484 #84820] DEBUG -- : body: Not Found
+I, [2021-12-13T23:09:20.532760 #18274]  INFO -- : Running example 'Verifying a pact between ProductService and CampaignService Given i get new product price with specified discount rate A request for campaign with GET /products/1/discount?rate=30 returns a response which has status code 200'
+I, [2021-12-13T23:09:20.544853 #18274]  INFO -- : Sending GET request to path: "/products/1/discount?rate=30" with headers: {"X_PACT_PROVIDER_STATES"=>[{"name"=>"i get new product price with specified discount rate"}]}, see debug logs for body
+D, [2021-12-13T23:09:20.544918 #18274] DEBUG -- : body :
+I, [2021-12-13T23:09:20.556345 #18274]  INFO -- : Received response with status: 200, headers: {"Content-Length"=>"38", "Content-Type"=>"application/json", "Date"=>"Mon, 13 Dec 2021 20:09:20 GMT"}, see debug logs for body
+D, [2021-12-13T23:09:20.556423 #18274] DEBUG -- : body: {"id":1,"name":"Product 1","price":70}
+I, [2021-12-13T23:09:20.558502 #18274]  INFO -- : Running example 'Verifying a pact between ProductService and CampaignService Given i get campaign not found error when the product has no discount A request for campaign without discounted product with GET /products/2/discount?rate=30 returns a response which has status code 406'
+I, [2021-12-13T23:09:20.568249 #18274]  INFO -- : Sending GET request to path: "/products/2/discount?rate=30" with headers: {"X_PACT_PROVIDER_STATES"=>[{"name"=>"i get campaign not found error when the product has no discount"}]}, see debug logs for body
+D, [2021-12-13T23:09:20.568308 #18274] DEBUG -- : body :
+I, [2021-12-13T23:09:20.570316 #18274]  INFO -- : Received response with status: 406, headers: {"Content-Length"=>"48", "Content-Type"=>"application/json", "Date"=>"Mon, 13 Dec 2021 20:09:20 GMT"}, see debug logs for body
+D, [2021-12-13T23:09:20.570365 #18274] DEBUG -- : body: {"message":"No campaign found for this product"}
+I, [2021-12-13T23:09:20.571247 #18274]  INFO -- : Running example 'Verifying a pact between ProductService and CampaignService Given i get the product does not exist A request for campaign with nonexist product with GET /products/3/discount?rate=30 returns a response which has status code 404'
+I, [2021-12-13T23:09:20.580905 #18274]  INFO -- : Sending GET request to path: "/products/3/discount?rate=30" with headers: {"X_PACT_PROVIDER_STATES"=>[{"name"=>"i get the product does not exist"}]}, see debug logs for body
+D, [2021-12-13T23:09:20.580964 #18274] DEBUG -- : body :
+I, [2021-12-13T23:09:20.582644 #18274]  INFO -- : Received response with status: 404, headers: {"Content-Length"=>"9", "Content-Type"=>"text/plain; charset=utf-8", "Date"=>"Mon, 13 Dec 2021 20:09:20 GMT"}, see debug logs for body
+D, [2021-12-13T23:09:20.582683 #18274] DEBUG -- : body: Not Found
+I, [2021-12-13T23:09:26.439395 #18354]  INFO -- : Running example 'Verifying a pact between ProductService and CampaignService Given i get new product price with specified discount rate A request for campaign with GET /products/1/discount?rate=30 returns a response which has status code 200'
+I, [2021-12-13T23:09:26.450590 #18354]  INFO -- : Sending GET request to path: "/products/1/discount?rate=30" with headers: {"X_PACT_PROVIDER_STATES"=>[{"name"=>"i get new product price with specified discount rate"}]}, see debug logs for body
+D, [2021-12-13T23:09:26.450654 #18354] DEBUG -- : body :
+I, [2021-12-13T23:09:26.460545 #18354]  INFO -- : Received response with status: 200, headers: {"Content-Length"=>"38", "Content-Type"=>"application/json", "Date"=>"Mon, 13 Dec 2021 20:09:26 GMT"}, see debug logs for body
+D, [2021-12-13T23:09:26.460620 #18354] DEBUG -- : body: {"id":1,"name":"Product 1","price":70}
+I, [2021-12-13T23:09:26.461938 #18354]  INFO -- : Running example 'Verifying a pact between ProductService and CampaignService Given i get campaign not found error when the product has no discount A request for campaign without discounted product with GET /products/2/discount?rate=30 returns a response which has status code 406'
+I, [2021-12-13T23:09:26.471391 #18354]  INFO -- : Sending GET request to path: "/products/2/discount?rate=30" with headers: {"X_PACT_PROVIDER_STATES"=>[{"name"=>"i get campaign not found error when the product has no discount"}]}, see debug logs for body
+D, [2021-12-13T23:09:26.471459 #18354] DEBUG -- : body :
+I, [2021-12-13T23:09:26.473442 #18354]  INFO -- : Received response with status: 406, headers: {"Content-Length"=>"48", "Content-Type"=>"application/json", "Date"=>"Mon, 13 Dec 2021 20:09:26 GMT"}, see debug logs for body
+D, [2021-12-13T23:09:26.473505 #18354] DEBUG -- : body: {"message":"No campaign found for this product"}
+I, [2021-12-13T23:09:26.474452 #18354]  INFO -- : Running example 'Verifying a pact between ProductService and CampaignService Given i get the product does not exist A request for campaign with nonexist product with GET /products/3/discount?rate=30 returns a response which has status code 404'
+I, [2021-12-13T23:09:26.484140 #18354]  INFO -- : Sending GET request to path: "/products/3/discount?rate=30" with headers: {"X_PACT_PROVIDER_STATES"=>[{"name"=>"i get the product does not exist"}]}, see debug logs for body
+D, [2021-12-13T23:09:26.484212 #18354] DEBUG -- : body :
+I, [2021-12-13T23:09:26.486115 #18354]  INFO -- : Received response with status: 404, headers: {"Content-Length"=>"9", "Content-Type"=>"text/plain; charset=utf-8", "Date"=>"Mon, 13 Dec 2021 20:09:26 GMT"}, see debug logs for body
+D, [2021-12-13T23:09:26.486184 #18354] DEBUG -- : body: Not Found
+I, [2021-12-13T23:09:53.862086 #18544]  INFO -- : Running example 'Verifying a pact between ProductService and CampaignService Given i get new product price with specified discount rate A request for campaign with GET /products/1/discount?rate=30 returns a response which has status code 200'
+I, [2021-12-13T23:09:53.872917 #18544]  INFO -- : Sending GET request to path: "/products/1/discount?rate=30" with headers: {"X_PACT_PROVIDER_STATES"=>[{"name"=>"i get new product price with specified discount rate"}]}, see debug logs for body
+D, [2021-12-13T23:09:53.872987 #18544] DEBUG -- : body :
+I, [2021-12-13T23:09:53.882554 #18544]  INFO -- : Received response with status: 200, headers: {"Content-Length"=>"38", "Content-Type"=>"application/json", "Date"=>"Mon, 13 Dec 2021 20:09:53 GMT"}, see debug logs for body
+D, [2021-12-13T23:09:53.882622 #18544] DEBUG -- : body: {"id":1,"name":"Product 1","price":70}
+I, [2021-12-13T23:09:53.883917 #18544]  INFO -- : Running example 'Verifying a pact between ProductService and CampaignService Given i get campaign not found error when the product has no discount A request for campaign without discounted product with GET /products/2/discount?rate=30 returns a response which has status code 406'
+I, [2021-12-13T23:09:53.893059 #18544]  INFO -- : Sending GET request to path: "/products/2/discount?rate=30" with headers: {"X_PACT_PROVIDER_STATES"=>[{"name"=>"i get campaign not found error when the product has no discount"}]}, see debug logs for body
+D, [2021-12-13T23:09:53.893124 #18544] DEBUG -- : body :
+I, [2021-12-13T23:09:53.895085 #18544]  INFO -- : Received response with status: 406, headers: {"Content-Length"=>"48", "Content-Type"=>"application/json", "Date"=>"Mon, 13 Dec 2021 20:09:53 GMT"}, see debug logs for body
+D, [2021-12-13T23:09:53.895143 #18544] DEBUG -- : body: {"message":"No campaign found for this product"}
+I, [2021-12-13T23:09:53.896027 #18544]  INFO -- : Running example 'Verifying a pact between ProductService and CampaignService Given i get the product does not exist A request for campaign wih nonexist product with GET /products/3/discount?rate=30 returns a response which has status code 404'
+I, [2021-12-13T23:09:53.905576 #18544]  INFO -- : Sending GET request to path: "/products/3/discount?rate=30" with headers: {"X_PACT_PROVIDER_STATES"=>[{"name"=>"i get the product does not exist"}]}, see debug logs for body
+D, [2021-12-13T23:09:53.905648 #18544] DEBUG -- : body :
+I, [2021-12-13T23:09:53.907801 #18544]  INFO -- : Received response with status: 404, headers: {"Content-Length"=>"9", "Content-Type"=>"text/plain; charset=utf-8", "Date"=>"Mon, 13 Dec 2021 20:09:53 GMT"}, see debug logs for body
+D, [2021-12-13T23:09:53.907895 #18544] DEBUG -- : body: Not Found
+I, [2021-12-13T23:10:00.920687 #18632]  INFO -- : Running example 'Verifying a pact between ProductService and CampaignService Given i get new product price with specified discount rate A request for campaign with GET /products/1/discount?rate=30 returns a response which has status code 200'
+I, [2021-12-13T23:10:00.933952 #18632]  INFO -- : Sending GET request to path: "/products/1/discount?rate=30" with headers: {"X_PACT_PROVIDER_STATES"=>[{"name"=>"i get new product price with specified discount rate"}]}, see debug logs for body
+D, [2021-12-13T23:10:00.934060 #18632] DEBUG -- : body :
+I, [2021-12-13T23:10:00.947027 #18632]  INFO -- : Received response with status: 200, headers: {"Content-Length"=>"38", "Content-Type"=>"application/json", "Date"=>"Mon, 13 Dec 2021 20:10:00 GMT"}, see debug logs for body
+D, [2021-12-13T23:10:00.947158 #18632] DEBUG -- : body: {"id":1,"name":"Product 1","price":70}
+I, [2021-12-13T23:10:00.948801 #18632]  INFO -- : Running example 'Verifying a pact between ProductService and CampaignService Given i get campaign not found error when the product has no discount A request for campaign without discounted product with GET /products/2/discount?rate=30 returns a response which has status code 406'
+I, [2021-12-13T23:10:00.958902 #18632]  INFO -- : Sending GET request to path: "/products/2/discount?rate=30" with headers: {"X_PACT_PROVIDER_STATES"=>[{"name"=>"i get campaign not found error when the product has no discount"}]}, see debug logs for body
+D, [2021-12-13T23:10:00.958996 #18632] DEBUG -- : body :
+I, [2021-12-13T23:10:00.961760 #18632]  INFO -- : Received response with status: 406, headers: {"Content-Length"=>"48", "Content-Type"=>"application/json", "Date"=>"Mon, 13 Dec 2021 20:10:00 GMT"}, see debug logs for body
+D, [2021-12-13T23:10:00.961831 #18632] DEBUG -- : body: {"message":"No campaign found for this product"}
+I, [2021-12-13T23:10:00.962690 #18632]  INFO -- : Running example 'Verifying a pact between ProductService and CampaignService Given i get the product does not exist A request for campaign with nonexist product with GET /products/3/discount?rate=30 returns a response which has status code 404'
+I, [2021-12-13T23:10:00.974058 #18632]  INFO -- : Sending GET request to path: "/products/3/discount?rate=30" with headers: {"X_PACT_PROVIDER_STATES"=>[{"name"=>"i get the product does not exist"}]}, see debug logs for body
+D, [2021-12-13T23:10:00.974157 #18632] DEBUG -- : body :
+I, [2021-12-13T23:10:00.977974 #18632]  INFO -- : Received response with status: 404, headers: {"Content-Length"=>"9", "Content-Type"=>"text/plain; charset=utf-8", "Date"=>"Mon, 13 Dec 2021 20:10:00 GMT"}, see debug logs for body
+D, [2021-12-13T23:10:00.978048 #18632] DEBUG -- : body: Not Found
+I, [2021-12-13T23:10:36.069112 #18905]  INFO -- : Running example 'Verifying a pact between ProductService and CampaignService Given i get new product price with specified discount rate A request for campaign with GET /products/1/discount?rate=30 returns a response which has status code 200'
+I, [2021-12-13T23:10:36.079810 #18905]  INFO -- : Sending GET request to path: "/products/1/discount?rate=30" with headers: {"X_PACT_PROVIDER_STATES"=>[{"name"=>"i get new product price with specified discount rate"}]}, see debug logs for body
+D, [2021-12-13T23:10:36.079875 #18905] DEBUG -- : body :
+I, [2021-12-13T23:10:36.089651 #18905]  INFO -- : Received response with status: 200, headers: {"Content-Length"=>"38", "Content-Type"=>"application/json", "Date"=>"Mon, 13 Dec 2021 20:10:36 GMT"}, see debug logs for body
+D, [2021-12-13T23:10:36.089713 #18905] DEBUG -- : body: {"id":1,"name":"Product 1","price":70}
+I, [2021-12-13T23:10:36.093405 #18905]  INFO -- : Running example 'Verifying a pact between ProductService and CampaignService Given i get campaign not found error when the product has no discount A request for campaign without discounted product with GET /products/2/discount?rate=30 returns a response which has status code 406'
+I, [2021-12-13T23:10:36.102520 #18905]  INFO -- : Sending GET request to path: "/products/2/discount?rate=30" with headers: {"X_PACT_PROVIDER_STATES"=>[{"name"=>"i get campaign not found error when the product has no discount"}]}, see debug logs for body
+D, [2021-12-13T23:10:36.102583 #18905] DEBUG -- : body :
+I, [2021-12-13T23:10:36.104354 #18905]  INFO -- : Received response with status: 406, headers: {"Content-Length"=>"48", "Content-Type"=>"application/json", "Date"=>"Mon, 13 Dec 2021 20:10:36 GMT"}, see debug logs for body
+D, [2021-12-13T23:10:36.104400 #18905] DEBUG -- : body: {"message":"No campaign found for this product"}
+I, [2021-12-13T23:10:36.105204 #18905]  INFO -- : Running example 'Verifying a pact between ProductService and CampaignService Given i get the product does not exist A request for campaign with nonexist product with GET /products/3/discount?rate=30 returns a response which has status code 404'
+I, [2021-12-13T23:10:36.113842 #18905]  INFO -- : Sending GET request to path: "/products/3/discount?rate=30" with headers: {"X_PACT_PROVIDER_STATES"=>[{"name"=>"i get the product does not exist"}]}, see debug logs for body
+D, [2021-12-13T23:10:36.113890 #18905] DEBUG -- : body :
+I, [2021-12-13T23:10:36.115462 #18905]  INFO -- : Received response with status: 404, headers: {"Content-Length"=>"9", "Content-Type"=>"text/plain; charset=utf-8", "Date"=>"Mon, 13 Dec 2021 20:10:36 GMT"}, see debug logs for body
+D, [2021-12-13T23:10:36.115521 #18905] DEBUG -- : body: Not Found
+I, [2021-12-13T23:11:06.724297 #19102]  INFO -- : Running example 'Verifying a pact between ProductService and CampaignService Given i get new product price with specified discount rate A request for campaign with GET /products/1/discount?rate=30 returns a response which has status code 200'
+I, [2021-12-13T23:11:06.735218 #19102]  INFO -- : Sending GET request to path: "/products/1/discount?rate=30" with headers: {"X_PACT_PROVIDER_STATES"=>[{"name"=>"i get new product price with specified discount rate"}]}, see debug logs for body
+D, [2021-12-13T23:11:06.735284 #19102] DEBUG -- : body :
+I, [2021-12-13T23:11:06.745425 #19102]  INFO -- : Received response with status: 200, headers: {"Content-Length"=>"38", "Content-Type"=>"application/json", "Date"=>"Mon, 13 Dec 2021 20:11:06 GMT"}, see debug logs for body
+D, [2021-12-13T23:11:06.745498 #19102] DEBUG -- : body: {"id":1,"name":"Product 1","price":70}
+I, [2021-12-13T23:11:06.746844 #19102]  INFO -- : Running example 'Verifying a pact between ProductService and CampaignService Given i get campaign not found error when the product has no discount A request for campaign without discounted product with GET /products/2/discount?rate=30 returns a response which has status code 406'
+I, [2021-12-13T23:11:06.756238 #19102]  INFO -- : Sending GET request to path: "/products/2/discount?rate=30" with headers: {"X_PACT_PROVIDER_STATES"=>[{"name"=>"i get campaign not found error when the product has no discount"}]}, see debug logs for body
+D, [2021-12-13T23:11:06.756327 #19102] DEBUG -- : body :
+I, [2021-12-13T23:11:06.758459 #19102]  INFO -- : Received response with status: 406, headers: {"Content-Length"=>"48", "Content-Type"=>"application/json", "Date"=>"Mon, 13 Dec 2021 20:11:06 GMT"}, see debug logs for body
+D, [2021-12-13T23:11:06.758511 #19102] DEBUG -- : body: {"message":"No campaign found for this product"}
+I, [2021-12-13T23:11:06.759330 #19102]  INFO -- : Running example 'Verifying a pact between ProductService and CampaignService Given i get the product does not exist A request for campaign wih nonexist product with GET /products/3/discount?rate=30 returns a response which has status code 404'
+I, [2021-12-13T23:11:06.768961 #19102]  INFO -- : Sending GET request to path: "/products/3/discount?rate=30" with headers: {"X_PACT_PROVIDER_STATES"=>[{"name"=>"i get the product does not exist"}]}, see debug logs for body
+D, [2021-12-13T23:11:06.769030 #19102] DEBUG -- : body :
+I, [2021-12-13T23:11:06.770827 #19102]  INFO -- : Received response with status: 404, headers: {"Content-Length"=>"9", "Content-Type"=>"text/plain; charset=utf-8", "Date"=>"Mon, 13 Dec 2021 20:11:06 GMT"}, see debug logs for body
+D, [2021-12-13T23:11:06.770875 #19102] DEBUG -- : body: Not Found
+I, [2021-12-13T23:11:12.501437 #19194]  INFO -- : Running example 'Verifying a pact between ProductService and CampaignService Given i get new product price with specified discount rate A request for campaign with GET /products/1/discount?rate=30 returns a response which has status code 200'
+I, [2021-12-13T23:11:12.512222 #19194]  INFO -- : Sending GET request to path: "/products/1/discount?rate=30" with headers: {"X_PACT_PROVIDER_STATES"=>[{"name"=>"i get new product price with specified discount rate"}]}, see debug logs for body
+D, [2021-12-13T23:11:12.512287 #19194] DEBUG -- : body :
+I, [2021-12-13T23:11:12.522361 #19194]  INFO -- : Received response with status: 200, headers: {"Content-Length"=>"38", "Content-Type"=>"application/json", "Date"=>"Mon, 13 Dec 2021 20:11:12 GMT"}, see debug logs for body
+D, [2021-12-13T23:11:12.522437 #19194] DEBUG -- : body: {"id":1,"name":"Product 1","price":70}
+I, [2021-12-13T23:11:12.525532 #19194]  INFO -- : Running example 'Verifying a pact between ProductService and CampaignService Given i get campaign not found error when the product has no discount A request for campaign without discounted product with GET /products/2/discount?rate=30 returns a response which has status code 406'
+I, [2021-12-13T23:11:12.534994 #19194]  INFO -- : Sending GET request to path: "/products/2/discount?rate=30" with headers: {"X_PACT_PROVIDER_STATES"=>[{"name"=>"i get campaign not found error when the product has no discount"}]}, see debug logs for body
+D, [2021-12-13T23:11:12.535057 #19194] DEBUG -- : body :
+I, [2021-12-13T23:11:12.536897 #19194]  INFO -- : Received response with status: 406, headers: {"Content-Length"=>"48", "Content-Type"=>"application/json", "Date"=>"Mon, 13 Dec 2021 20:11:12 GMT"}, see debug logs for body
+D, [2021-12-13T23:11:12.536941 #19194] DEBUG -- : body: {"message":"No campaign found for this product"}
+I, [2021-12-13T23:11:12.537767 #19194]  INFO -- : Running example 'Verifying a pact between ProductService and CampaignService Given i get the product does not exist A request for campaign with nonexist product with GET /products/3/discount?rate=30 returns a response which has status code 404'
+I, [2021-12-13T23:11:12.547097 #19194]  INFO -- : Sending GET request to path: "/products/3/discount?rate=30" with headers: {"X_PACT_PROVIDER_STATES"=>[{"name"=>"i get the product does not exist"}]}, see debug logs for body
+D, [2021-12-13T23:11:12.547158 #19194] DEBUG -- : body :
+I, [2021-12-13T23:11:12.548937 #19194]  INFO -- : Received response with status: 404, headers: {"Content-Length"=>"9", "Content-Type"=>"text/plain; charset=utf-8", "Date"=>"Mon, 13 Dec 2021 20:11:12 GMT"}, see debug logs for body
+D, [2021-12-13T23:11:12.548982 #19194] DEBUG -- : body: Not Found
+I, [2021-12-13T23:11:24.350332 #19355]  INFO -- : Running example 'Verifying a pact between ProductService and CampaignService Given i get new product price with specified discount rate A request for campaign with GET /products/1/discount?rate=30 returns a response which has status code 200'
+I, [2021-12-13T23:11:24.363756 #19355]  INFO -- : Sending GET request to path: "/products/1/discount?rate=30" with headers: {"X_PACT_PROVIDER_STATES"=>[{"name"=>"i get new product price with specified discount rate"}]}, see debug logs for body
+D, [2021-12-13T23:11:24.363838 #19355] DEBUG -- : body :
+I, [2021-12-13T23:11:24.376865 #19355]  INFO -- : Received response with status: 200, headers: {"Content-Length"=>"38", "Content-Type"=>"application/json", "Date"=>"Mon, 13 Dec 2021 20:11:24 GMT"}, see debug logs for body
+D, [2021-12-13T23:11:24.376967 #19355] DEBUG -- : body: {"id":1,"name":"Product 1","price":70}
+I, [2021-12-13T23:11:24.378747 #19355]  INFO -- : Running example 'Verifying a pact between ProductService and CampaignService Given i get campaign not found error when the product has no discount A request for campaign without discounted product with GET /products/2/discount?rate=30 returns a response which has status code 406'
+I, [2021-12-13T23:11:24.390995 #19355]  INFO -- : Sending GET request to path: "/products/2/discount?rate=30" with headers: {"X_PACT_PROVIDER_STATES"=>[{"name"=>"i get campaign not found error when the product has no discount"}]}, see debug logs for body
+D, [2021-12-13T23:11:24.391072 #19355] DEBUG -- : body :
+I, [2021-12-13T23:11:24.393716 #19355]  INFO -- : Received response with status: 406, headers: {"Content-Length"=>"48", "Content-Type"=>"application/json", "Date"=>"Mon, 13 Dec 2021 20:11:24 GMT"}, see debug logs for body
+D, [2021-12-13T23:11:24.393784 #19355] DEBUG -- : body: {"message":"No campaign found for this product"}
+I, [2021-12-13T23:11:24.394692 #19355]  INFO -- : Running example 'Verifying a pact between ProductService and CampaignService Given i get the product does not exist A request for campaign with nonexist product with GET /products/3/discount?rate=30 returns a response which has status code 404'
+I, [2021-12-13T23:11:24.406551 #19355]  INFO -- : Sending GET request to path: "/products/3/discount?rate=30" with headers: {"X_PACT_PROVIDER_STATES"=>[{"name"=>"i get the product does not exist"}]}, see debug logs for body
+D, [2021-12-13T23:11:24.406618 #19355] DEBUG -- : body :
+I, [2021-12-13T23:11:24.409598 #19355]  INFO -- : Received response with status: 404, headers: {"Content-Length"=>"9", "Content-Type"=>"text/plain; charset=utf-8", "Date"=>"Mon, 13 Dec 2021 20:11:24 GMT"}, see debug logs for body
+D, [2021-12-13T23:11:24.409668 #19355] DEBUG -- : body: Not Found
+I, [2021-12-13T23:17:27.031231 #20787]  INFO -- : Running example 'Verifying a pact between ProductService and CampaignService Given i get new product price with specified discount rate A request for campaign with GET /products/1/discount?rate=30 returns a response which has status code 200'
+I, [2021-12-13T23:17:27.043458 #20787]  INFO -- : Sending GET request to path: "/products/1/discount?rate=30" with headers: {"X_PACT_PROVIDER_STATES"=>[{"name"=>"i get new product price with specified discount rate"}]}, see debug logs for body
+D, [2021-12-13T23:17:27.043534 #20787] DEBUG -- : body :
+I, [2021-12-13T23:17:27.055337 #20787]  INFO -- : Received response with status: 200, headers: {"Content-Length"=>"38", "Content-Type"=>"application/json", "Date"=>"Mon, 13 Dec 2021 20:17:27 GMT"}, see debug logs for body
+D, [2021-12-13T23:17:27.055410 #20787] DEBUG -- : body: {"id":1,"name":"Product 1","price":70}
+I, [2021-12-13T23:17:27.057116 #20787]  INFO -- : Running example 'Verifying a pact between ProductService and CampaignService Given i get campaign not found error when the product has no discount A request for campaign without discounted product with GET /products/2/discount?rate=30 returns a response which has status code 406'
+I, [2021-12-13T23:17:27.066782 #20787]  INFO -- : Sending GET request to path: "/products/2/discount?rate=30" with headers: {"X_PACT_PROVIDER_STATES"=>[{"name"=>"i get campaign not found error when the product has no discount"}]}, see debug logs for body
+D, [2021-12-13T23:17:27.066849 #20787] DEBUG -- : body :
+I, [2021-12-13T23:17:27.068880 #20787]  INFO -- : Received response with status: 406, headers: {"Content-Length"=>"48", "Content-Type"=>"application/json", "Date"=>"Mon, 13 Dec 2021 20:17:27 GMT"}, see debug logs for body
+D, [2021-12-13T23:17:27.068929 #20787] DEBUG -- : body: {"message":"No campaign found for this product"}
+I, [2021-12-13T23:17:27.069755 #20787]  INFO -- : Running example 'Verifying a pact between ProductService and CampaignService Given i get the product does not exist A request for campaign with nonexist product with GET /products/3/discount?rate=30 returns a response which has status code 404'
+I, [2021-12-13T23:17:27.079994 #20787]  INFO -- : Sending GET request to path: "/products/3/discount?rate=30" with headers: {"X_PACT_PROVIDER_STATES"=>[{"name"=>"i get the product does not exist"}]}, see debug logs for body
+D, [2021-12-13T23:17:27.080065 #20787] DEBUG -- : body :
+I, [2021-12-13T23:17:27.082148 #20787]  INFO -- : Received response with status: 404, headers: {"Content-Length"=>"9", "Content-Type"=>"text/plain; charset=utf-8", "Date"=>"Mon, 13 Dec 2021 20:17:27 GMT"}, see debug logs for body
+D, [2021-12-13T23:17:27.082209 #20787] DEBUG -- : body: Not Found
+I, [2021-12-13T23:18:00.557842 #21087]  INFO -- : Running example 'Verifying a pact between ProductService and CampaignService Given i get new product price with specified discount rate A request for campaign with GET /products/1/discount?rate=30 returns a response which has status code 200'
+I, [2021-12-13T23:18:00.569362 #21087]  INFO -- : Sending GET request to path: "/products/1/discount?rate=30" with headers: {"X_PACT_PROVIDER_STATES"=>[{"name"=>"i get new product price with specified discount rate"}]}, see debug logs for body
+D, [2021-12-13T23:18:00.569430 #21087] DEBUG -- : body :
+I, [2021-12-13T23:18:00.580461 #21087]  INFO -- : Received response with status: 200, headers: {"Content-Length"=>"38", "Content-Type"=>"application/json", "Date"=>"Mon, 13 Dec 2021 20:18:00 GMT"}, see debug logs for body
+D, [2021-12-13T23:18:00.580544 #21087] DEBUG -- : body: {"id":1,"name":"Product 1","price":70}
+I, [2021-12-13T23:18:00.582526 #21087]  INFO -- : Running example 'Verifying a pact between ProductService and CampaignService Given i get campaign not found error when the product has no discount A request for campaign without discounted product with GET /products/2/discount?rate=30 returns a response which has status code 406'
+I, [2021-12-13T23:18:00.592077 #21087]  INFO -- : Sending GET request to path: "/products/2/discount?rate=30" with headers: {"X_PACT_PROVIDER_STATES"=>[{"name"=>"i get campaign not found error when the product has no discount"}]}, see debug logs for body
+D, [2021-12-13T23:18:00.592136 #21087] DEBUG -- : body :
+I, [2021-12-13T23:18:00.593995 #21087]  INFO -- : Received response with status: 406, headers: {"Content-Length"=>"48", "Content-Type"=>"application/json", "Date"=>"Mon, 13 Dec 2021 20:18:00 GMT"}, see debug logs for body
+D, [2021-12-13T23:18:00.594039 #21087] DEBUG -- : body: {"message":"No campaign found for this product"}
+I, [2021-12-13T23:18:00.594872 #21087]  INFO -- : Running example 'Verifying a pact between ProductService and CampaignService Given i get the product does not exist A request for campaign with nonexist product with GET /products/3/discount?rate=30 returns a response which has status code 404'
+I, [2021-12-13T23:18:00.604657 #21087]  INFO -- : Sending GET request to path: "/products/3/discount?rate=30" with headers: {"X_PACT_PROVIDER_STATES"=>[{"name"=>"i get the product does not exist"}]}, see debug logs for body
+D, [2021-12-13T23:18:00.604721 #21087] DEBUG -- : body :
+I, [2021-12-13T23:18:00.606632 #21087]  INFO -- : Received response with status: 404, headers: {"Content-Length"=>"9", "Content-Type"=>"text/plain; charset=utf-8", "Date"=>"Mon, 13 Dec 2021 20:18:00 GMT"}, see debug logs for body
+D, [2021-12-13T23:18:00.606674 #21087] DEBUG -- : body: Not Found

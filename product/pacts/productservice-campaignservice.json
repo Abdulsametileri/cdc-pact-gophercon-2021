@@ -1,0 +1,99 @@
+{
+  "consumer": {
+    "name": "ProductService"
+  },
+  "provider": {
+    "name": "CampaignService"
+  },
+  "interactions": [
+    {
+      "description": "A request for campaign",
+      "providerState": "i get new product price with specified discount rate",
+      "request": {
+        "method": "GET",
+        "path": "/products/1/discount",
+        "query": "rate=30",
+        "matchingRules": {
+          "$.query.rate[0]": {
+            "match": "type"
+          }
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "body": {
+          "id": 42,
+          "name": "",
+          "price": 42
+        },
+        "matchingRules": {
+          "$.body.id": {
+            "match": "type"
+          },
+          "$.body.name": {
+            "match": "type"
+          },
+          "$.body.price": {
+            "match": "type"
+          }
+        }
+      }
+    },
+    {
+      "description": "A request for campaign without discounted product",
+      "providerState": "i get campaign not found error when the product has no discount",
+      "request": {
+        "method": "GET",
+        "path": "/products/2/discount",
+        "query": "rate=30",
+        "matchingRules": {
+          "$.query.rate[0]": {
+            "match": "type"
+          }
+        }
+      },
+      "response": {
+        "status": 406,
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "body": {
+          "message": "No campaign found for this product"
+        },
+        "matchingRules": {
+          "$.body.message": {
+            "match": "type"
+          }
+        }
+      }
+    },
+    {
+      "description": "A request for campaign with nonexist product",
+      "providerState": "i get the product does not exist",
+      "request": {
+        "method": "GET",
+        "path": "/products/3/discount",
+        "query": "rate=30",
+        "matchingRules": {
+          "$.query.rate[0]": {
+            "match": "type"
+          }
+        }
+      },
+      "response": {
+        "status": 404,
+        "headers": {
+          "Content-Type": "text/plain; charset=utf-8"
+        }
+      }
+    }
+  ],
+  "metadata": {
+    "pactSpecification": {
+      "version": "2.0.0"
+    }
+  }
+}

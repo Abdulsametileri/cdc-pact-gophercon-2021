@@ -2,6 +2,8 @@
 
 set -x
 
+VERSION=$1 #like 1.0.0
+
 curl -X PUT \
     http://localhost/pacts/provider/CampaignService/consumer/ProductService/version/${VERSION} \
     -H "Content-Type: application/json" \
